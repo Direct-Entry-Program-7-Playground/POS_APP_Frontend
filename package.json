@@ -1,0 +1,17 @@
+{
+  "name": "POS App Bootstrap Frontend",
+  "version": "0.0.1",
+  "description": "POS App Bootstrap 5 Frontend created to connect with the POS APP Servlet",
+  "keywords": "HTML5, Bootstrap, CSS3, POS-App",
+  "license": "MIT",
+  "author": "Manoj R. Randnei <randeni.ramr@gmail.com>",
+  "scripts": {
+    "clean": "rm -rf dist doc",
+    "build": "npm run clean && parcel build --public-url ./ index.html 404.html --out-dir doc",
+    "dev": "parcel index.html --out-dir doc --open",
+    "start": "npm run build && npm run dev"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}

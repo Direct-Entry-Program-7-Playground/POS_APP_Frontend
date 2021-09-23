@@ -1,0 +1,14 @@
+{
+  "short_name": "pos_app_frontend",
+  "name": "pos_app_bootstrap_frontend",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#fafafa",
+  "theme_color": "#fafafa"
+}
