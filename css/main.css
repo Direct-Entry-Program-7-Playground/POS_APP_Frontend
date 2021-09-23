@@ -6,3 +6,17 @@
 .text-small {
   font-size: 85%;
 }
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__icon {
+  position: absolute;
+  //   left: 300px;
+  right: -10px;
+  bottom: -85px;
+  font-size: 12rem;
+  color: white;
+}
