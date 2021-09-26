@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html class="no-js h-100" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>POS App - Manage Items</title>
+    <meta name="description" content="POS APP Bootstrap 5 Front-end" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link type="text/plain" rel="author" href="./humans.txt" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body class="d-flex flex-column h-100">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="bootstrap" viewBox="0 0 118 94">
+        <title>Bootstrap</title>
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+        ></path>
+      </symbol>
+    </svg>
+    <header class="flex-shrink-0 sticky-top">
+      <div class="px-3 py-2 bg-dark bg text-white">
+        <div class="container">
+          <div
+            class="
+              d-flex
+              flex-column flex-md-row
+              align-items-center
+              justify-content-between
+            "
+          >
+            <a
+              href="/"
+              class="
+                col-sm-12 col-md-2
+                d-flex
+                justify-content-sm-center justify-content-md-start
+                my-2 my-lg-0
+                me-lg-auto
+                text-white text-decoration-none
+              "
+            >
+              <svg
+                class="bi me-2"
+                width="40"
+                height="32"
+                role="img"
+                aria-label="Bootstrap"
+              >
+                <use xlink:href="#bootstrap"></use>
+              </svg>
+            </a>
+
+            <ul
+              class="
+                nav
+                col-sm-12 col-md-10
+                d-flex
+                flex-nowrap
+                justify-content-sm-center justify-content-md-end
+                my-md-0
+                text-small
+                gap-1
+              "
+            >
+              <li>
+                <a
+                  href="#"
+                  class="
+                    nav-link
+                    text-white
+                    d-flex
+                    flex-row flex-md-column
+                    align-items-center
+                  "
+                >
+                  <i
+                    class="bi bi-house-door-fill px-2"
+                    style="font-size: 1.2rem"
+                  ></i>
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="
+                    nav-link
+                    text-white
+                    d-flex
+                    flex-row flex-md-column
+                    align-items-center
+                    d-
+                  "
+                >
+                  <i class="bi bi-table px-2" style="font-size: 1.2rem"></i>
+                  Orders
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="
+                    nav-link
+                    text-white
+                    d-flex
+                    flex-row flex-md-column
+                    align-items-center
+                  "
+                >
+                  <i
+                    class="bi bi-ui-checks-grid px-2"
+                    style="font-size: 1.2rem"
+                  ></i>
+                  Products
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="
+                    nav-link
+                    text-white
+                    d-flex
+                    flex-row flex-md-column
+                    align-items-center
+                  "
+                >
+                  <i
+                    class="bi bi-people-fill px-2"
+                    style="font-size: 1.2rem"
+                  ></i>
+
+                  Customers
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="flex-shrink-0 py-3">
+      <div class="container">
+        <div class="row">
+          <h3 class="m-0">Dashboard</h3>
+        </div>
+        <div class="row my-3 gx-3">
+          <div class="col-md-12 col-lg-4">
+            <div class="card text-white bg-success bg-gradient mb-3">
+              <div class="card-body shadow">
+                <h5 class="card-title">Today Income</h5>
+                <p class="card-text display-5 py-3">Rs. 65,000.00</p>
+                <i class="card__icon bi-currency-dollar opacity-25"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <div class="card text-white bg-secondary bg-gradient mb-3">
+              <div class="card-body shadow">
+                <h5 class="card-title">New Orders</h5>
+                <p class="card-text display-5 py-3">26</p>
+                <i class="card__icon bi-cart-check opacity-25"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <div class="card text-white bg-secondary bg-gradient mb-3">
+              <div class="card-body shadow">
+                <h5 class="card-title">New Customers</h5>
+                <p class="card-text display-5 py-3">10</p>
+                <i class="card__icon bi-person-plus opacity-25"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row my-3 gx-3">
+          <div class="col-md-12 col-lg-4">
+            <div class="card">
+              <h5 class="card-header">Top Orders</h5>
+              <div class="card-body">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">OID</th>
+                      <th scope="col">Customer</th>
+                      <th scope="col">Order Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Rs. 45,000.00</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Rs. 35,000.00</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Audrey</td>
+                      <td>Rs. 25,000.00</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Deirdre</td>
+                      <td>Rs. 23,000.00</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>Karen</td>
+                      <td>Rs. 20,000.00</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6</th>
+                      <td>Emma</td>
+                      <td>Rs. 10,000.00</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">7</th>
+                      <td>Diana</td>
+                      <td>Rs. 9,000.00</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">8</th>
+                      <td>Harry</td>
+                      <td>Rs. 8,000.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer d-flex justify-content-end">
+                <nav aria-label="Page navigation ">
+                  <ul class="pagination pagination-sm mb-0">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <div class="card">
+              <h5 class="card-header">Hot Items</h5>
+              <div class="card-body">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">IID</th>
+                      <th scope="col">Item</th>
+                      <th scope="col">Sold</th>
+                      <th scope="col">Available</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Books</td>
+                      <td>50</td>
+                      <td>500</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Watches</td>
+                      <td>46</td>
+                      <td>350</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Vitamins</td>
+                      <td>40</td>
+                      <td>256</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Beverages</td>
+                      <td>35</td>
+                      <td>456</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>Candles</td>
+                      <td>22</td>
+                      <td>423</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6</th>
+                      <td>Candy</td>
+                      <td>20</td>
+                      <td>423</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">7</th>
+                      <td class="text-truncate">Energy drinks</td>
+                      <td>10</td>
+                      <td>225</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">8</th>
+                      <td>Toothpaste</td>
+                      <td>5</td>
+                      <td>20</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer d-flex justify-content-end">
+                <nav aria-label="Page navigation ">
+                  <ul class="pagination pagination-sm mb-0">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <div class="card">
+              <h5 class="card-header">Top Customers</h5>
+              <div class="card-body">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="text-truncate">CID</th>
+                      <th scope="col" class="text-truncate">Customer</th>
+                      <th scope="col" class="text-truncate">Items</th>
+                      <th scope="col " class="text-truncate">Total Spend</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td class="text-truncate">Mark</td>
+                      <td class="text-truncate">5</td>
+                      <td class="text-truncate">Rs. 45,000.00</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td class="text-truncate">Jacob</td>
+                      <td class="text-truncate">20</td>
+                      <td class="text-truncate">Rs. 35,000.00</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td class="text-truncate">Audrey</td>
+                      <td class="text-truncate">15</td>
+                      <td class="text-truncate">Rs. 25,000.00</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td class="text-truncate">Deirdre</td>
+                      <td class="text-truncate">23</td>
+                      <td class="text-truncate">Rs. 23,000.00</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td class="text-truncate">Karen</td>
+                      <td class="text-truncate">220</td>
+                      <td class="text-truncate">Rs. 20,000.00</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6</th>
+                      <td class="text-truncate">Emma</td>
+                      <td class="text-truncate">10</td>
+                      <td class="text-truncate">Rs. 10,000.00</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">7</th>
+                      <td class="text-truncate">Diana</td>
+                      <td class="text-truncate">9</td>
+                      <td class="text-truncate">Rs. 9,000.00</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">8</th>
+                      <td class="text-truncate">Harry</td>
+                      <td class="text-truncate">5</td>
+                      <td class="text-truncate">Rs. 8,000.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer d-flex justify-content-end">
+                <nav aria-label="Page navigation ">
+                  <ul class="pagination pagination-sm mb-0">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="py-3 bg-light border-top">
+      <div
+        class="
+          container
+          d-flex
+          flex-wrap
+          justify-content-between
+          align-items-center
+        "
+      >
+        <div class="col-md-4 d-flex align-items-center">
+          <a
+            href="/"
+            class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
+          >
+            <svg class="bi" width="30" height="24">
+              <use xlink:href="#bootstrap" />
+            </svg>
+          </a>
+          <span class="text-muted">&copy; 2021 Manoj Randeni</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a
+              target="_blank"
+              class="text-muted"
+              href="https://github.com/ManojRAMR"
+              ><i class="bi bi-github" style="font-size: 1.2rem"></i
+            ></a>
+          </li>
+          <li class="ms-3">
+            <a
+              target="_blank"
+              class="text-muted"
+              href="https://twitter.com/manoj_r_r"
+              ><i class="bi bi-twitter" style="font-size: 1.2rem"></i
+            ></a>
+          </li>
+          <li class="ms-3">
+            <a
+              target="_blank"
+              class="text-muted"
+              href="https://www.linkedin.com/in/manojrandeni/"
+              ><i class="bi bi-linkedin" style="font-size: 1.2rem"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
