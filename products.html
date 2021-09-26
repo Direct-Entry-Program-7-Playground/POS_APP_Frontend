@@ -157,310 +157,208 @@
     </header>
     <main class="flex-shrink-0 py-3">
       <div class="container">
-        <div class="row">
-          <h3 class="m-0">Dashboard</h3>
+        <div
+          class="row h-100 px-3 pt-3 pb-5 text-white bg-primary rounded-2 m-0"
+        >
+          <h2 class="mb-5">Manage Products</h2>
         </div>
+
         <div class="row my-3 gx-3">
           <div class="col-md-12 col-lg-4">
-            <div class="card text-white bg-success bg-gradient mb-3">
-              <div class="card-body shadow">
-                <h5 class="card-title">Today Income</h5>
-                <p class="card-text display-5 py-3">Rs. 65,000.00</p>
-                <i class="card__icon bi-currency-dollar opacity-25"></i>
+            <div class="card mb-3">
+              <div class="card-header h5">Add new product</div>
+              <div class="card-body">
+                <form
+                  method="GET"
+                  action="#"
+                  class="needs-validation"
+                  novalidate
+                >
+                  <div class="mb-3">
+                    <label for="prod-desc" class="form-label"
+                      >Product description</label
+                    >
+                    <input
+                      name="prod-desc"
+                      type="text"
+                      class="form-control"
+                      id="prod-desc"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please provide a product description
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="mb-3">
+                        <label for="prod-qty" class="form-label"
+                          >Quantity on hand</label
+                        >
+                        <input
+                          name="prod-qty"
+                          type="number"
+                          class="form-control"
+                          id="prod-qty"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please provide quantity on hand
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="mb-3">
+                        <label for="prod-price" class="form-label"
+                          >Unit price (Rs.)</label
+                        >
+                        <input
+                          name="prod-price"
+                          type="number"
+                          class="form-control"
+                          id="prod-price"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please provide unit price
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary">
+                      Submit
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-          <div class="col-md-12 col-lg-4">
-            <div class="card text-white bg-secondary bg-gradient mb-3">
-              <div class="card-body shadow">
-                <h5 class="card-title">New Orders</h5>
-                <p class="card-text display-5 py-3">26</p>
-                <i class="card__icon bi-cart-check opacity-25"></i>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 col-lg-4">
-            <div class="card text-white bg-secondary bg-gradient mb-3">
-              <div class="card-body shadow">
-                <h5 class="card-title">New Customers</h5>
-                <p class="card-text display-5 py-3">10</p>
-                <i class="card__icon bi-person-plus opacity-25"></i>
-              </div>
+          <div class="col-md-12 col-lg-8">
+            <div class="card">
+              <div class="card-header h5">Listed products</div>
+              <div class="card-body"><table class="table table-striped mb-0 ">
+                <thead >
+                  <tr>
+                    <th scope="col">IID</th>
+                    <th scope="col"  >Item</th>
+                    <th scope="col" >Sold</th>
+                    <th scope="col" class="text-truncate" >Qty. on hand</th>
+                    <th scope="col" class="text-truncate" >Unit price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row" class="text-truncate">I00001</td>
+                    <td class="text-truncate">Books</td>
+                    <td>50</td>
+                    <td >500</td>
+                    <td class="text-truncate">Rs. 6,000.50</td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="text-truncate">I00002</td>
+                    <td>Watches</td>
+                    <td>46</td>
+                    <td>350</td>
+                    <td class="text-truncate">Rs. 12,560.00</td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="text-truncate">I00003</td>
+                    <td>Vitamins</td>
+                    <td>40</td>
+                    <td>256</td>
+                    <td class="text-truncate">Rs. 2,500.00</td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="text-truncate">I00004</td>
+                    <td class="text-truncate">Beverages</td>
+                    <td>35</td>
+                    <td>456</td>
+                    <td class="text-truncate">Rs. 56.75</td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="text-truncate">I00005</td>
+                    <td class="text-truncate">Candles</td>
+                    <td>22</td>
+                    <td>423</td>
+                    <td class="text-truncate">Rs. 356.00</td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="text-truncate">I00006</td>
+                    <td class="text-truncate">Candy</td>
+                    <td>20</td>
+                    <td>423</td>
+                    <td class="text-truncate">Rs. 50.00</td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="text-truncate">I00007</td>
+                    <td class="text-truncate">Energy drinks</td>
+                    <td>10</td>
+                    <td>225</td>
+                    <td class="text-truncate">Rs. 785.00</td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="text-truncate">I00008</td>
+                    <td class="text-truncate">Toothpaste</td>
+                    <td>5</td>
+                    <td>20</td>
+                    <td class="text-truncate">Rs. 135.00</td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="text-truncate">I00009</td>
+                    <td class="text-truncate">Cake</td>
+                    <td>30</td>
+                    <td>52</td>
+                    <td class="text-truncate">Rs. 850.00</td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="text-truncate">I00010</td>
+                    <td class="text-truncate">Chocolate</td>
+                    <td>256</td>
+                    <td>1230</td>
+                    <td class="text-truncate">Rs. 550.00</td>
+                  </tr>
+                  
+                </tbody>
+              </table></div>
+              <div class="card-footer d-flex justify-content-end">
+              <nav aria-label="Page navigation ">
+                <ul class="pagination pagination mb-0">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">4</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">5</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
-        <div class="row my-3 gx-3">
-          <div class="col-md-12 col-lg-4">
-            <div class="card">
-              <h5 class="card-header">Top Orders</h5>
-              <div class="card-body">
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th scope="col">OID</th>
-                      <th scope="col">Customer</th>
-                      <th scope="col">Order Amount</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Rs. 45,000.00</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Rs. 35,000.00</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Audrey</td>
-                      <td>Rs. 25,000.00</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                      <td>Deirdre</td>
-                      <td>Rs. 23,000.00</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">5</th>
-                      <td>Karen</td>
-                      <td>Rs. 20,000.00</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">6</th>
-                      <td>Emma</td>
-                      <td>Rs. 10,000.00</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">7</th>
-                      <td>Diana</td>
-                      <td>Rs. 9,000.00</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">8</th>
-                      <td>Harry</td>
-                      <td>Rs. 8,000.00</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="card-footer d-flex justify-content-end">
-                <nav aria-label="Page navigation ">
-                  <ul class="pagination pagination-sm mb-0">
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                      </a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 col-lg-4">
-            <div class="card">
-              <h5 class="card-header">Hot Items</h5>
-              <div class="card-body">
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th scope="col">IID</th>
-                      <th scope="col">Item</th>
-                      <th scope="col">Sold</th>
-                      <th scope="col">Available</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Books</td>
-                      <td>50</td>
-                      <td>500</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Watches</td>
-                      <td>46</td>
-                      <td>350</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Vitamins</td>
-                      <td>40</td>
-                      <td>256</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                      <td>Beverages</td>
-                      <td>35</td>
-                      <td>456</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">5</th>
-                      <td>Candles</td>
-                      <td>22</td>
-                      <td>423</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">6</th>
-                      <td>Candy</td>
-                      <td>20</td>
-                      <td>423</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">7</th>
-                      <td class="text-truncate">Energy drinks</td>
-                      <td>10</td>
-                      <td>225</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">8</th>
-                      <td>Toothpaste</td>
-                      <td>5</td>
-                      <td>20</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="card-footer d-flex justify-content-end">
-                <nav aria-label="Page navigation ">
-                  <ul class="pagination pagination-sm mb-0">
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                      </a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 col-lg-4">
-            <div class="card">
-              <h5 class="card-header">Top Customers</h5>
-              <div class="card-body">
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th scope="col" class="text-truncate">CID</th>
-                      <th scope="col" class="text-truncate">Customer</th>
-                      <th scope="col" class="text-truncate">Items</th>
-                      <th scope="col " class="text-truncate">Total Spend</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td class="text-truncate">Mark</td>
-                      <td class="text-truncate">5</td>
-                      <td class="text-truncate">Rs. 45,000.00</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td class="text-truncate">Jacob</td>
-                      <td class="text-truncate">20</td>
-                      <td class="text-truncate">Rs. 35,000.00</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td class="text-truncate">Audrey</td>
-                      <td class="text-truncate">15</td>
-                      <td class="text-truncate">Rs. 25,000.00</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                      <td class="text-truncate">Deirdre</td>
-                      <td class="text-truncate">23</td>
-                      <td class="text-truncate">Rs. 23,000.00</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">5</th>
-                      <td class="text-truncate">Karen</td>
-                      <td class="text-truncate">220</td>
-                      <td class="text-truncate">Rs. 20,000.00</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">6</th>
-                      <td class="text-truncate">Emma</td>
-                      <td class="text-truncate">10</td>
-                      <td class="text-truncate">Rs. 10,000.00</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">7</th>
-                      <td class="text-truncate">Diana</td>
-                      <td class="text-truncate">9</td>
-                      <td class="text-truncate">Rs. 9,000.00</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">8</th>
-                      <td class="text-truncate">Harry</td>
-                      <td class="text-truncate">5</td>
-                      <td class="text-truncate">Rs. 8,000.00</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="card-footer d-flex justify-content-end">
-                <nav aria-label="Page navigation ">
-                  <ul class="pagination pagination-sm mb-0">
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                      </a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </main>
-    <footer class="py-3 bg-light border-top">
+    <footer class="py-3 bg-light border-top mt-auto">
       <div
         class="
           container
