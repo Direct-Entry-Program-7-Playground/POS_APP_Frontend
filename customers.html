@@ -2,7 +2,7 @@
 <html class="no-js h-100" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>POS App - Manage Products</title>
+    <title>POS App - Manage Customers</title>
     <meta name="description" content="POS APP Bootstrap 5 Front-end" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -115,7 +115,7 @@
               </li>
               <li>
                 <a
-                  href="#"
+                  href="./products.html"
                   class="
                     nav-link
                     text-white
@@ -133,7 +133,7 @@
               </li>
               <li>
                 <a
-                  href="./customers.html"
+                  href="#"
                   class="
                     nav-link
                     text-white
@@ -160,13 +160,13 @@
         <div
           class="row h-100 px-3 pt-3 pb-5 text-white bg-primary rounded-2 m-0"
         >
-          <h2 class="mb-5">Manage Products</h2>
+          <h2 class="mb-5">Manage Customers</h2>
         </div>
 
         <div class="row my-3 gx-3">
           <div class="col-md-12 col-lg-4">
             <div class="card mb-3">
-              <div class="card-header h5">Add new product</div>
+              <div class="card-header h5">Add new customer</div>
               <div class="card-body">
                 <form
                   method="GET"
@@ -175,54 +175,33 @@
                   novalidate
                 >
                   <div class="mb-3">
-                    <label for="prod-desc" class="form-label"
-                      >Product description</label
+                    <label for="customer-name" class="form-label"
+                      >Customer Name</label
                     >
                     <input
-                      name="prod-desc"
+                      name="customer-name"
                       type="text"
                       class="form-control"
-                      id="prod-desc"
+                      id="customer-name"
                       required
                     />
                     <div class="invalid-feedback">
-                      Please provide a product description
+                      Please provide customer name
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="mb-3">
-                        <label for="prod-qty" class="form-label"
-                          >Quantity on hand</label
-                        >
-                        <input
-                          name="prod-qty"
-                          type="number"
-                          class="form-control"
-                          id="prod-qty"
-                          required
-                        />
-                        <div class="invalid-feedback">
-                          Please provide quantity on hand
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="mb-3">
-                        <label for="prod-price" class="form-label"
-                          >Unit price (Rs.)</label
-                        >
-                        <input
-                          name="prod-price"
-                          type="number"
-                          class="form-control"
-                          id="prod-price"
-                          required
-                        />
-                        <div class="invalid-feedback">
-                          Please provide unit price
-                        </div>
-                      </div>
+                  <div class="mb-3">
+                    <label for="prod-qty" class="form-label"
+                      >Customer Address</label
+                    >
+                    <input
+                      name="prod-qty"
+                      type="number"
+                      class="form-control"
+                      id="prod-qty"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please provide customer address
                     </div>
                   </div>
                   <div class="d-flex justify-content-end">
@@ -236,87 +215,65 @@
           </div>
           <div class="col-md-12 col-lg-8">
             <div class="card">
-              <div class="card-header h5">Listed products</div>
+              <div class="card-header h5">Listed customers</div>
               <div class="card-body"><table id="tblListedProduct" class="table table-striped mb-0 table-hover">
                 <thead >
                   <tr>
-                    <th scope="col">IID</th>
-                    <th scope="col"  >Item</th>
-                    <th scope="col" >Sold</th>
-                    <th scope="col" class="text-truncate" >Qty. on hand</th>
-                    <th scope="col" class="text-truncate" >Unit price</th>
+                    <th scope="col">CID</th>
+                    <th scope="col"  >Name</th>
+                    <th scope="col" >Address</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr >
-                    <td scope="row" class="text-truncate">I00001</td>
-                    <td class="text-truncate">Books</td>
-                    <td>50</td>
-                    <td >500</td>
-                    <td class="text-truncate">Rs. 6,000.50</td>
+                    <td scope="row" class="text-truncate">C00001</td>
+                    <td class="text-truncate">Dulaj</td>
+                    <td>Kurunegala</td>
                   </tr>
                   <tr >
-                    <td scope="row" class="text-truncate">I00002</td>
-                    <td>Watches</td>
-                    <td>46</td>
-                    <td>350</td>
-                    <td class="text-truncate">Rs. 12,560.00</td>
+                    <td scope="row" class="text-truncate">C00002</td>
+                    <td>Chamith</td>
+                    <td>Galle</td>
                   </tr>
                   <tr>
-                    <td scope="row" class="text-truncate">I00003</td>
-                    <td>Vitamins</td>
-                    <td>40</td>
-                    <td>256</td>
-                    <td class="text-truncate">Rs. 2,500.00</td>
+                    <td scope="row" class="text-truncate">C00003</td>
+                    <td>Milan</td>
+                    <td>Kandy</td>
                   </tr>
                   <tr>
-                    <td scope="row" class="text-truncate">I00004</td>
-                    <td class="text-truncate">Beverages</td>
-                    <td>35</td>
-                    <td>456</td>
-                    <td class="text-truncate">Rs. 56.75</td>
+                    <td scope="row" class="text-truncate">C00004</td>
+                    <td class="text-truncate">Sasindu</td>
+                    <td>Panadura</td>
                   </tr>
                   <tr>
-                    <td scope="row" class="text-truncate">I00005</td>
-                    <td class="text-truncate">Candles</td>
-                    <td>22</td>
-                    <td>423</td>
-                    <td class="text-truncate">Rs. 356.00</td>
+                    <td scope="row" class="text-truncate">C00005</td>
+                    <td class="text-truncate">Bhanuka</td>
+                    <td>Moratuwa</td>
                   </tr>
                   <tr>
-                    <td scope="row" class="text-truncate">I00006</td>
-                    <td class="text-truncate">Candy</td>
-                    <td>20</td>
-                    <td>423</td>
-                    <td class="text-truncate">Rs. 50.00</td>
+                    <td scope="row" class="text-truncate">C00006</td>
+                    <td class="text-truncate">Sanath</td>
+                    <td>Matara</td>
                   </tr>
                   <tr>
-                    <td scope="row" class="text-truncate">I00007</td>
-                    <td class="text-truncate">Energy drinks</td>
-                    <td>10</td>
-                    <td>225</td>
-                    <td class="text-truncate">Rs. 785.00</td>
+                    <td scope="row" class="text-truncate">C00007</td>
+                    <td class="text-truncate">Malinga</td>
+                    <td>Galle</td>
                   </tr>
                   <tr>
-                    <td scope="row" class="text-truncate">I00008</td>
-                    <td class="text-truncate">Toothpaste</td>
-                    <td>5</td>
-                    <td>20</td>
-                    <td class="text-truncate">Rs. 135.00</td>
+                    <td scope="row" class="text-truncate">C00008</td>
+                    <td class="text-truncate">Dammika</td>
+                    <td>Colombo</td>
                   </tr>
                   <tr>
-                    <td scope="row" class="text-truncate">I00009</td>
-                    <td class="text-truncate">Cake</td>
-                    <td>30</td>
-                    <td>52</td>
-                    <td class="text-truncate">Rs. 850.00</td>
+                    <td scope="row" class="text-truncate">C00009</td>
+                    <td class="text-truncate">Nuwan</td>
+                    <td>Ampara</td>
                   </tr>
                   <tr>
-                    <td scope="row" class="text-truncate">I00010</td>
-                    <td class="text-truncate">Chocolate</td>
-                    <td>256</td>
-                    <td>1230</td>
-                    <td class="text-truncate">Rs. 550.00</td>
+                    <td scope="row" class="text-truncate">C00010</td>
+                    <td class="text-truncate">Pubudu</td>
+                    <td>Rathnapura</td>
                   </tr>
                   
                 </tbody>
